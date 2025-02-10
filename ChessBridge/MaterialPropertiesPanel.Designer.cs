@@ -66,6 +66,16 @@ namespace ChessBridge
             this.oppNSpinner = new System.Windows.Forms.NumericUpDown();
             this.pSpinner = new System.Windows.Forms.NumericUpDown();
             this.oppPSpinner = new System.Windows.Forms.NumericUpDown();
+            this.QVal = new System.Windows.Forms.TextBox();
+            this.oppQVal = new System.Windows.Forms.TextBox();
+            this.RVal = new System.Windows.Forms.TextBox();
+            this.oppRVal = new System.Windows.Forms.TextBox();
+            this.BVal = new System.Windows.Forms.TextBox();
+            this.oppBVal = new System.Windows.Forms.TextBox();
+            this.NVal = new System.Windows.Forms.TextBox();
+            this.oppNVal = new System.Windows.Forms.TextBox();
+            this.PVal = new System.Windows.Forms.TextBox();
+            this.oppPVal = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.qSlider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.qSpinner)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.oppQSlider)).BeginInit();
@@ -182,10 +192,10 @@ namespace ChessBridge
             // 
             this.qSpinner.Location = new System.Drawing.Point(365, 7);
             this.qSpinner.Maximum = new decimal(new int[] {
-                                    150,
-                                    0,
-                                    0,
-                                    0});
+            150,
+            0,
+            0,
+            0});
             this.qSpinner.Name = "qSpinner";
             this.qSpinner.Size = new System.Drawing.Size(62, 20);
             this.qSpinner.TabIndex = 11;
@@ -285,10 +295,10 @@ namespace ChessBridge
             // 
             this.oppQSpinner.Location = new System.Drawing.Point(365, 49);
             this.oppQSpinner.Maximum = new decimal(new int[] {
-                                    150,
-                                    0,
-                                    0,
-                                    0});
+            150,
+            0,
+            0,
+            0});
             this.oppQSpinner.Name = "oppQSpinner";
             this.oppQSpinner.Size = new System.Drawing.Size(62, 20);
             this.oppQSpinner.TabIndex = 21;
@@ -298,10 +308,10 @@ namespace ChessBridge
             // 
             this.rSpinner.Location = new System.Drawing.Point(365, 88);
             this.rSpinner.Maximum = new decimal(new int[] {
-                                    150,
-                                    0,
-                                    0,
-                                    0});
+            150,
+            0,
+            0,
+            0});
             this.rSpinner.Name = "rSpinner";
             this.rSpinner.Size = new System.Drawing.Size(62, 20);
             this.rSpinner.TabIndex = 22;
@@ -311,10 +321,10 @@ namespace ChessBridge
             // 
             this.oppRSpinner.Location = new System.Drawing.Point(365, 129);
             this.oppRSpinner.Maximum = new decimal(new int[] {
-                                    150,
-                                    0,
-                                    0,
-                                    0});
+            150,
+            0,
+            0,
+            0});
             this.oppRSpinner.Name = "oppRSpinner";
             this.oppRSpinner.Size = new System.Drawing.Size(62, 20);
             this.oppRSpinner.TabIndex = 23;
@@ -324,10 +334,10 @@ namespace ChessBridge
             // 
             this.bSpinner.Location = new System.Drawing.Point(365, 174);
             this.bSpinner.Maximum = new decimal(new int[] {
-                                    150,
-                                    0,
-                                    0,
-                                    0});
+            150,
+            0,
+            0,
+            0});
             this.bSpinner.Name = "bSpinner";
             this.bSpinner.Size = new System.Drawing.Size(62, 20);
             this.bSpinner.TabIndex = 24;
@@ -337,10 +347,10 @@ namespace ChessBridge
             // 
             this.oppBSpinner.Location = new System.Drawing.Point(365, 222);
             this.oppBSpinner.Maximum = new decimal(new int[] {
-                                    150,
-                                    0,
-                                    0,
-                                    0});
+            150,
+            0,
+            0,
+            0});
             this.oppBSpinner.Name = "oppBSpinner";
             this.oppBSpinner.Size = new System.Drawing.Size(62, 20);
             this.oppBSpinner.TabIndex = 25;
@@ -350,10 +360,10 @@ namespace ChessBridge
             // 
             this.nSpinner.Location = new System.Drawing.Point(365, 270);
             this.nSpinner.Maximum = new decimal(new int[] {
-                                    150,
-                                    0,
-                                    0,
-                                    0});
+            150,
+            0,
+            0,
+            0});
             this.nSpinner.Name = "nSpinner";
             this.nSpinner.Size = new System.Drawing.Size(62, 20);
             this.nSpinner.TabIndex = 26;
@@ -363,10 +373,10 @@ namespace ChessBridge
             // 
             this.oppNSpinner.Location = new System.Drawing.Point(365, 313);
             this.oppNSpinner.Maximum = new decimal(new int[] {
-                                    150,
-                                    0,
-                                    0,
-                                    0});
+            150,
+            0,
+            0,
+            0});
             this.oppNSpinner.Name = "oppNSpinner";
             this.oppNSpinner.Size = new System.Drawing.Size(62, 20);
             this.oppNSpinner.TabIndex = 27;
@@ -376,10 +386,10 @@ namespace ChessBridge
             // 
             this.pSpinner.Location = new System.Drawing.Point(366, 355);
             this.pSpinner.Maximum = new decimal(new int[] {
-                                    150,
-                                    0,
-                                    0,
-                                    0});
+            150,
+            0,
+            0,
+            0});
             this.pSpinner.Name = "pSpinner";
             this.pSpinner.Size = new System.Drawing.Size(62, 20);
             this.pSpinner.TabIndex = 28;
@@ -389,19 +399,119 @@ namespace ChessBridge
             // 
             this.oppPSpinner.Location = new System.Drawing.Point(365, 392);
             this.oppPSpinner.Maximum = new decimal(new int[] {
-                                    150,
-                                    0,
-                                    0,
-                                    0});
+            150,
+            0,
+            0,
+            0});
             this.oppPSpinner.Name = "oppPSpinner";
             this.oppPSpinner.Size = new System.Drawing.Size(62, 20);
             this.oppPSpinner.TabIndex = 29;
             this.oppPSpinner.ValueChanged += new System.EventHandler(this.OppPSpinnerValueChanged);
             // 
+            // QVal
+            // 
+            this.QVal.Location = new System.Drawing.Point(365, 7);
+            this.QVal.Name = "QVal";
+            this.QVal.ReadOnly = true;
+            this.QVal.Size = new System.Drawing.Size(62, 20);
+            this.QVal.TabIndex = 30;
+            this.QVal.Text = "0.0";
+            // 
+            // oppQVal
+            // 
+            this.oppQVal.Location = new System.Drawing.Point(365, 49);
+            this.oppQVal.Name = "oppQVal";
+            this.oppQVal.ReadOnly = true;
+            this.oppQVal.Size = new System.Drawing.Size(62, 20);
+            this.oppQVal.TabIndex = 31;
+            this.oppQVal.Text = "0.0";
+            // 
+            // RVal
+            // 
+            this.RVal.Location = new System.Drawing.Point(365, 88);
+            this.RVal.Name = "RVal";
+            this.RVal.ReadOnly = true;
+            this.RVal.Size = new System.Drawing.Size(62, 20);
+            this.RVal.TabIndex = 32;
+            this.RVal.Text = "0.0";
+            // 
+            // oppRVal
+            // 
+            this.oppRVal.Location = new System.Drawing.Point(365, 129);
+            this.oppRVal.Name = "oppRVal";
+            this.oppRVal.ReadOnly = true;
+            this.oppRVal.Size = new System.Drawing.Size(62, 20);
+            this.oppRVal.TabIndex = 33;
+            this.oppRVal.Text = "0.0";
+            // 
+            // BVal
+            // 
+            this.BVal.Location = new System.Drawing.Point(365, 174);
+            this.BVal.Name = "BVal";
+            this.BVal.ReadOnly = true;
+            this.BVal.Size = new System.Drawing.Size(62, 20);
+            this.BVal.TabIndex = 34;
+            this.BVal.Text = "0.0";
+            // 
+            // oppBVal
+            // 
+            this.oppBVal.Location = new System.Drawing.Point(365, 222);
+            this.oppBVal.Name = "oppBVal";
+            this.oppBVal.ReadOnly = true;
+            this.oppBVal.Size = new System.Drawing.Size(62, 20);
+            this.oppBVal.TabIndex = 35;
+            this.oppBVal.Text = "0.0";
+            // 
+            // NVal
+            // 
+            this.NVal.Location = new System.Drawing.Point(365, 270);
+            this.NVal.Name = "NVal";
+            this.NVal.ReadOnly = true;
+            this.NVal.Size = new System.Drawing.Size(62, 20);
+            this.NVal.TabIndex = 36;
+            this.NVal.Text = "0.0";
+            // 
+            // oppNVal
+            // 
+            this.oppNVal.Location = new System.Drawing.Point(365, 313);
+            this.oppNVal.Name = "oppNVal";
+            this.oppNVal.ReadOnly = true;
+            this.oppNVal.Size = new System.Drawing.Size(62, 20);
+            this.oppNVal.TabIndex = 37;
+            this.oppNVal.Text = "0.0";
+            // 
+            // PVal
+            // 
+            this.PVal.Location = new System.Drawing.Point(366, 355);
+            this.PVal.Name = "PVal";
+            this.PVal.ReadOnly = true;
+            this.PVal.Size = new System.Drawing.Size(62, 20);
+            this.PVal.TabIndex = 38;
+            this.PVal.Text = "0.0";
+            // 
+            // oppPVal
+            // 
+            this.oppPVal.Location = new System.Drawing.Point(365, 392);
+            this.oppPVal.Name = "oppPVal";
+            this.oppPVal.ReadOnly = true;
+            this.oppPVal.Size = new System.Drawing.Size(62, 20);
+            this.oppPVal.TabIndex = 39;
+            this.oppPVal.Text = "0.0";
+            // 
             // MaterialPropertiesPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.oppPVal);
+            this.Controls.Add(this.PVal);
+            this.Controls.Add(this.oppNVal);
+            this.Controls.Add(this.NVal);
+            this.Controls.Add(this.oppBVal);
+            this.Controls.Add(this.BVal);
+            this.Controls.Add(this.oppRVal);
+            this.Controls.Add(this.RVal);
+            this.Controls.Add(this.oppQVal);
+            this.Controls.Add(this.QVal);
             this.Controls.Add(this.oppPSpinner);
             this.Controls.Add(this.pSpinner);
             this.Controls.Add(this.oppNSpinner);
@@ -456,6 +566,7 @@ namespace ChessBridge
             ((System.ComponentModel.ISupportInitialize)(this.oppPSpinner)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
         private System.Windows.Forms.NumericUpDown oppPSpinner;
         private System.Windows.Forms.NumericUpDown pSpinner;
@@ -487,5 +598,15 @@ namespace ChessBridge
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox QVal;
+        private System.Windows.Forms.TextBox oppQVal;
+        private System.Windows.Forms.TextBox RVal;
+        private System.Windows.Forms.TextBox oppRVal;
+        private System.Windows.Forms.TextBox BVal;
+        private System.Windows.Forms.TextBox oppBVal;
+        private System.Windows.Forms.TextBox NVal;
+        private System.Windows.Forms.TextBox oppNVal;
+        private System.Windows.Forms.TextBox PVal;
+        private System.Windows.Forms.TextBox oppPVal;
     }
 }

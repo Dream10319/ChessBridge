@@ -10,6 +10,7 @@ using System;
 using System.IO;
 using System.Text;
 using System.Collections.Generic;
+using System.Reflection;
 
 namespace ChessBridge
 {
@@ -61,32 +62,32 @@ namespace ChessBridge
 		private const int CM_OWNCONTROLOFCENTER_OFFSET = 0x60; //Own control of center (0 to 200)
 		private const int CM_OPPCONTROLOFCENTER_OFFSET = 0x64; //Opponet control of center (0 to 200)
 		
-		private const int CM_OWNMOBILITY_OFFSET = 0x68; //Own mobility (0 to 200)
+		private const int CM_OWNMOBILITY_OFFSET = 0x64; //Own mobility (0 to 200)
 		private const int CM_OPPMOBILITY_OFFSET = 0x6C; //Opponet mobility (0 to 200)
 		
-		private const int CM_OWNKINGSAFETY_OFFSET = 0x70; //Own king safety (0 to 200)
+		private const int CM_OWNKINGSAFETY_OFFSET = 0x68; //Own king safety (0 to 200)
 		private const int CM_OPPKINGSAFETY_OFFSET = 0x74; //Opponet king safety (0 to 200)
 		
-		private const int CM_OWNPASSEDPAWNS_OFFSET = 0x78; //Own passed pawns (0 to 200)
+		private const int CM_OWNPASSEDPAWNS_OFFSET = 0x6C; //Own passed pawns (0 to 200)
 		private const int CM_OPPPASSEDPAWNS_OFFSET = 0x7C; //Opponet passed pawns (0 to 200)
 		
-		private const int CM_OWNPAWNWEAKNESS_OFFSET = 0x80; //Own pawn weakness (0 to 200)
+		private const int CM_OWNPAWNWEAKNESS_OFFSET = 0x70; //Own pawn weakness (0 to 200)
 		private const int CM_OPPPAWNWEAKNESS_OFFSET = 0x84; //Opponet pawn weakness (0 to 200)
 		
-		private const int CM_OWNQUEEN_OFFSET = 0x88; //Own queen 0x0 to 0x96 (0 to 15.0)
-		private const int CM_OPPQUEEN_OFFSET = 0x8C; //Opponet queen 0x0 to 0x96 (0 to 15.0)
+		private const int CM_OWNQUEEN_OFFSET = 0x74; //Own queen 0x0 to 0x96 (0 to 15.0)
+		private const int CM_OPPQUEEN_OFFSET = 0x78; //Opponet queen 0x0 to 0x96 (0 to 15.0)
 		
-		private const int CM_OWNROOK_OFFSET = 0x90; //Own queen 0x0 to 0x96 (0 to 15.0)
-		private const int CM_OPPROOK_OFFSET = 0x94; //Opponet queen 0x0 to 0x96 (0 to 15.0)
+		private const int CM_OWNROOK_OFFSET = 0x7C; //Own queen 0x0 to 0x96 (0 to 15.0)
+		private const int CM_OPPROOK_OFFSET = 0x80; //Opponet queen 0x0 to 0x96 (0 to 15.0)
 		
-		private const int CM_OWNBISHOP_OFFSET = 0x98; //Own queen 0x0 to 0x96 (0 to 15.0)
-		private const int CM_OPPBISHOP_OFFSET = 0x9C; //Opponet queen 0x0 to 0x96 (0 to 15.0)
+		private const int CM_OWNBISHOP_OFFSET = 0x84; //Own queen 0x0 to 0x96 (0 to 15.0)
+		private const int CM_OPPBISHOP_OFFSET = 0x88; //Opponet queen 0x0 to 0x96 (0 to 15.0)
 		
-		private const int CM_OWNKNIGHT_OFFSET = 0xA0; //Own queen 0x0 to 0x96 (0 to 15.0)
-		private const int CM_OPPKNIGHT_OFFSET = 0xA4; //Opponet queen 0x0 to 0x96 (0 to 15.0)
+		private const int CM_OWNKNIGHT_OFFSET = 0x8C; //Own queen 0x0 to 0x96 (0 to 15.0)
+		private const int CM_OPPKNIGHT_OFFSET = 0x90; //Opponet queen 0x0 to 0x96 (0 to 15.0)
 		
-		private const int CM_OWNPAWN_OFFSET = 0xA8; //Own queen 0x0 to 0x96 (0 to 15.0)
-		private const int CM_OPPPAWN_OFFSET = 0xAC; //Opponet queen 0x0 to 0x96 (0 to 15.0)
+		private const int CM_OWNPAWN_OFFSET = 0x94; //Own queen 0x0 to 0x96 (0 to 15.0)
+		private const int CM_OPPPAWN_OFFSET = 0x98; //Opponet queen 0x0 to 0x96 (0 to 15.0)
 		
 		
 		private const int CM_UNKNOWN_B0_OFFSET = 0xB0; //always 0
@@ -506,17 +507,37 @@ namespace ChessBridge
             sb.AppendLine("cm_parm tts="+Math.Pow(2,18+this.TtSize));*/			
 			return sb.ToString();
 		}
-		
-		/**
+
+        /**
 		 * Parses a Chessmaster personality.
 		 */
-		public void parsePersonality(String personalityFile)
+
+        static byte[] ReadEmbeddedResource(string resourceName)
+        {
+            Assembly assembly = Assembly.GetExecutingAssembly();
+            using (Stream stream = assembly.GetManifestResourceStream(resourceName))
+            {
+                if (stream == null)
+                {
+                    Console.WriteLine("Resource not found!");
+                    return null;
+                }
+
+                using (MemoryStream ms = new MemoryStream())
+                {
+                    stream.CopyTo(ms);
+                    return ms.ToArray();
+                }
+            }
+        }
+        public void parsePersonality(String personalityFile)
 		{
 		    Personality personality = this;
-		    
-			byte[] bytes = File.ReadAllBytes(personalityFile);
-			
-			Program.log("\n**************************************************");
+
+            //byte[] bytes = File.ReadAllBytes(personalityFile);
+            byte[] bytes = ReadEmbeddedResource("ChessBridge.Personalities.Liam.CMP");
+
+            Program.log("\n**************************************************");
 			Program.log("Parsing Chessmaster Personality "+personalityFile);
 			Program.log("**************************************************");
 			

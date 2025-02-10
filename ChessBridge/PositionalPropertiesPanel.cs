@@ -36,6 +36,10 @@ namespace ChessBridge
         public void setPersonality(Personality personality)
         {
             //init control values
+
+            this.matPosSlider.Value = personality.MatPos;
+            this.matPosSpinner.Value = personality.MatPos;
+
             this.cocSlider.Value = personality.OwnCoC;
             this.cocSpinner.Value = personality.OwnCoC;
             
@@ -72,6 +76,9 @@ namespace ChessBridge
          */ 
         public void saveToPersonality(Personality personality)
         {
+            personality.MatPos = this.matPosSlider.Value;
+            personality.MatPos = (int)this.matPosSpinner.Value;
+
             personality.OwnCoC = this.cocSlider.Value;
             personality.OwnCoC = (int)this.cocSpinner.Value;
             
@@ -300,6 +307,26 @@ namespace ChessBridge
             if (slider != spinner)
             {
                 this.oppKSSlider.Value = (int)this.oppKSSpinner.Value;
+            }
+        }
+
+        void MatPosSliderScroll(object sender, System.EventArgs e)
+        {
+            int slider = this.matPosSlider.Value;
+            int spinner = (int)this.matPosSpinner.Value;
+            if (slider != spinner)
+            {
+                this.matPosSpinner.Value = this.matPosSlider.Value;
+            }
+        }
+
+        void MatPosSpinnerValueChanged(object sender, System.EventArgs e)
+        {
+            int slider = this.matPosSlider.Value;
+            int spinner = (int)this.matPosSpinner.Value;
+            if (slider != spinner)
+            {
+                this.matPosSlider.Value = (int)this.matPosSpinner.Value;
             }
         }
     }

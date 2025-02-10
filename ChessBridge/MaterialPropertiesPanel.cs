@@ -35,33 +35,43 @@ namespace ChessBridge
             //init control values
             this.qSlider.Value = personality.OwnQ;
             this.qSpinner.Value = personality.OwnQ;
-            
+            this.QVal.Text = (double.Parse(personality.OwnQ.ToString()) / 10.00).ToString("0.0");
+
             this.oppQSlider.Value = personality.OppQ;
             this.oppQSpinner.Value = personality.OppQ;
-            
+            this.oppQVal.Text = (double.Parse(personality.OppQ.ToString()) / 10.00).ToString("0.0");
+
             this.rSlider.Value = personality.OwnR;
             this.rSpinner.Value = personality.OwnR;
-            
+            this.RVal.Text = (double.Parse(personality.OwnR.ToString()) / 10.00).ToString("0.0");
+
             this.oppRSlider.Value = personality.OppR;
             this.oppRSpinner.Value = personality.OppR;
-            
+            this.oppRVal.Text = (double.Parse(personality.OwnR.ToString()) / 10.00).ToString("0.0");
+
             this.bSlider.Value = personality.OwnB;
             this.bSpinner.Value = personality.OwnB;
-            
+            this.BVal.Text = (double.Parse(personality.OwnB.ToString()) / 10.00).ToString("0.0");
+
             this.oppBSlider.Value = personality.OppB;
             this.oppBSpinner.Value = personality.OppB;
-            
+            this.oppBVal.Text = (double.Parse(personality.OppB.ToString()) / 10.00).ToString("0.0");
+
             this.nSlider.Value = personality.OwnQ;
             this.nSpinner.Value = personality.OwnQ;
-            
+            this.NVal.Text = (double.Parse(personality.OwnQ.ToString()) / 10.00).ToString("0.0");
+
             this.oppNSlider.Value = personality.OppN;
             this.oppNSpinner.Value = personality.OppN;
-            
+            this.oppNVal.Text = (double.Parse(personality.OppN.ToString()) / 10.00).ToString("0.0");
+
             this.pSlider.Value = personality.OwnP;
             this.pSpinner.Value = personality.OwnP;
-            
+            this.PVal.Text = (double.Parse(personality.OwnP.ToString()) / 10.00).ToString("0.0");
+
             this.oppPSlider.Value = personality.OppP;
             this.oppPSpinner.Value = personality.OppP;
+            this.oppPVal.Text = (double.Parse(personality.OppP.ToString()) / 10.00).ToString("0.0");
         }
         
          /**
@@ -107,6 +117,7 @@ namespace ChessBridge
             if (slider != spinner)
             {
                 this.qSpinner.Value = this.qSlider.Value;
+                this.QVal.Text = (double.Parse(slider.ToString()) / 10.00).ToString("0.0");
             }
         }
         
@@ -127,6 +138,7 @@ namespace ChessBridge
             if (slider != spinner)
             {
                 this.oppQSpinner.Value = this.oppQSlider.Value;
+                this.oppQVal.Text = (double.Parse(slider.ToString()) / 10.00).ToString("0.0");
             }
         }
         
@@ -147,6 +159,7 @@ namespace ChessBridge
             if (slider != spinner)
             {
                 this.rSpinner.Value = this.rSlider.Value;
+                this.RVal.Text = (double.Parse(slider.ToString()) / 10.00).ToString("0.0");
             }
         }
         
@@ -167,6 +180,7 @@ namespace ChessBridge
             if (slider != spinner)
             {
                 this.oppRSpinner.Value = this.oppRSlider.Value;
+                this.oppRVal.Text = (double.Parse(slider.ToString()) / 10.00).ToString("0.0");
             }
         }
         
@@ -187,6 +201,7 @@ namespace ChessBridge
             if (slider != spinner)
             {
                 this.bSpinner.Value = this.bSlider.Value;
+                this.BVal.Text = (double.Parse(slider.ToString()) / 10.00).ToString("0.0");
             }
         }
         
@@ -207,6 +222,7 @@ namespace ChessBridge
             if (slider != spinner)
             {
                 this.oppBSpinner.Value = this.oppBSlider.Value;
+                this.oppBVal.Text = (double.Parse(slider.ToString()) / 10.00).ToString("0.0");
             }
         }
         
@@ -227,6 +243,7 @@ namespace ChessBridge
             if (slider != spinner)
             {
                 this.nSpinner.Value = this.nSlider.Value;
+                this.NVal.Text = (double.Parse(slider.ToString()) / 10.00).ToString("0.0");
             }
         }
         
@@ -247,6 +264,7 @@ namespace ChessBridge
             if (slider != spinner)
             {
                 this.oppNSpinner.Value = this.oppNSlider.Value;
+                this.oppNVal.Text = (double.Parse(slider.ToString()) / 10.00).ToString("0.0");
             }
         }
         
@@ -267,6 +285,7 @@ namespace ChessBridge
             if (slider != spinner)
             {
                 this.pSpinner.Value = this.pSlider.Value;
+                this.PVal.Text = (double.Parse(slider.ToString()) / 10.00).ToString("0.0");
             }
         }
         
@@ -287,6 +306,7 @@ namespace ChessBridge
             if (slider != spinner)
             {
                 this.oppPSpinner.Value = this.oppPSlider.Value;
+                this.oppPVal.Text = (double.Parse(slider.ToString()) / 10.00).ToString("0.0");
             }
         }
         

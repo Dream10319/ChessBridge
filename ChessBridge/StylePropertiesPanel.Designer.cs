@@ -42,9 +42,6 @@ namespace ChessBridge
             this.attackDefendSlider = new System.Windows.Forms.TrackBar();
             this.sopSlider = new System.Windows.Forms.TrackBar();
             this.sopSpinner = new System.Windows.Forms.NumericUpDown();
-            this.matPosLabel = new System.Windows.Forms.Label();
-            this.matPosSlider = new System.Windows.Forms.TrackBar();
-            this.matPosSpinner = new System.Windows.Forms.NumericUpDown();
             this.randLabel = new System.Windows.Forms.Label();
             this.maxDepthLabel = new System.Windows.Forms.Label();
             this.selSearchLabel = new System.Windows.Forms.Label();
@@ -61,12 +58,11 @@ namespace ChessBridge
             this.selSearchSpinner = new System.Windows.Forms.NumericUpDown();
             this.codSpinner = new System.Windows.Forms.NumericUpDown();
             this.ttSizeComboBox = new System.Windows.Forms.ComboBox();
+            this.codVal = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.attackDefendSpinner)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.attackDefendSlider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sopSlider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sopSpinner)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.matPosSlider)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.matPosSpinner)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.randomSlider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.maxDepthSlider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.selSearchSlider)).BeginInit();
@@ -79,20 +75,20 @@ namespace ChessBridge
             // 
             // adLabel
             // 
-            this.adLabel.Location = new System.Drawing.Point(3, 7);
+            this.adLabel.Location = new System.Drawing.Point(3, 22);
             this.adLabel.Name = "adLabel";
             this.adLabel.Size = new System.Drawing.Size(112, 16);
             this.adLabel.TabIndex = 1;
-            this.adLabel.Text = "Attack/Defense";
+            this.adLabel.Text = "Attacker/Defender";
             // 
             // attackDefendSpinner
             // 
-            this.attackDefendSpinner.Location = new System.Drawing.Point(367, 3);
+            this.attackDefendSpinner.Location = new System.Drawing.Point(367, 18);
             this.attackDefendSpinner.Minimum = new decimal(new int[] {
-                                    100,
-                                    0,
-                                    0,
-                                    -2147483648});
+            100,
+            0,
+            0,
+            -2147483648});
             this.attackDefendSpinner.Name = "attackDefendSpinner";
             this.attackDefendSpinner.Size = new System.Drawing.Size(55, 20);
             this.attackDefendSpinner.TabIndex = 2;
@@ -100,7 +96,7 @@ namespace ChessBridge
             // 
             // sopLabel
             // 
-            this.sopLabel.Location = new System.Drawing.Point(3, 57);
+            this.sopLabel.Location = new System.Drawing.Point(3, 72);
             this.sopLabel.Name = "sopLabel";
             this.sopLabel.Size = new System.Drawing.Size(112, 16);
             this.sopLabel.TabIndex = 3;
@@ -108,7 +104,7 @@ namespace ChessBridge
             // 
             // attackDefendSlider
             // 
-            this.attackDefendSlider.Location = new System.Drawing.Point(121, 4);
+            this.attackDefendSlider.Location = new System.Drawing.Point(121, 19);
             this.attackDefendSlider.Maximum = 100;
             this.attackDefendSlider.Minimum = -100;
             this.attackDefendSlider.Name = "attackDefendSlider";
@@ -119,7 +115,7 @@ namespace ChessBridge
             // 
             // sopSlider
             // 
-            this.sopSlider.Location = new System.Drawing.Point(121, 55);
+            this.sopSlider.Location = new System.Drawing.Point(121, 70);
             this.sopSlider.Maximum = 100;
             this.sopSlider.Name = "sopSlider";
             this.sopSlider.Size = new System.Drawing.Size(240, 45);
@@ -129,47 +125,15 @@ namespace ChessBridge
             // 
             // sopSpinner
             // 
-            this.sopSpinner.Location = new System.Drawing.Point(367, 55);
+            this.sopSpinner.Location = new System.Drawing.Point(367, 70);
             this.sopSpinner.Name = "sopSpinner";
             this.sopSpinner.Size = new System.Drawing.Size(55, 20);
             this.sopSpinner.TabIndex = 5;
             this.sopSpinner.ValueChanged += new System.EventHandler(this.SopSpinnerValueChanged);
             // 
-            // matPosLabel
-            // 
-            this.matPosLabel.Location = new System.Drawing.Point(3, 110);
-            this.matPosLabel.Name = "matPosLabel";
-            this.matPosLabel.Size = new System.Drawing.Size(112, 16);
-            this.matPosLabel.TabIndex = 6;
-            this.matPosLabel.Text = "Material/Positional";
-            // 
-            // matPosSlider
-            // 
-            this.matPosSlider.Location = new System.Drawing.Point(121, 106);
-            this.matPosSlider.Maximum = 100;
-            this.matPosSlider.Minimum = -100;
-            this.matPosSlider.Name = "matPosSlider";
-            this.matPosSlider.Size = new System.Drawing.Size(240, 45);
-            this.matPosSlider.TabIndex = 7;
-            this.matPosSlider.TickFrequency = 10;
-            this.matPosSlider.Scroll += new System.EventHandler(this.MatPosSliderScroll);
-            // 
-            // matPosSpinner
-            // 
-            this.matPosSpinner.Location = new System.Drawing.Point(367, 106);
-            this.matPosSpinner.Minimum = new decimal(new int[] {
-                                    100,
-                                    0,
-                                    0,
-                                    -2147483648});
-            this.matPosSpinner.Name = "matPosSpinner";
-            this.matPosSpinner.Size = new System.Drawing.Size(55, 20);
-            this.matPosSpinner.TabIndex = 8;
-            this.matPosSpinner.ValueChanged += new System.EventHandler(this.MatPosSpinnerValueChanged);
-            // 
             // randLabel
             // 
-            this.randLabel.Location = new System.Drawing.Point(3, 157);
+            this.randLabel.Location = new System.Drawing.Point(3, 122);
             this.randLabel.Name = "randLabel";
             this.randLabel.Size = new System.Drawing.Size(112, 16);
             this.randLabel.TabIndex = 9;
@@ -177,7 +141,7 @@ namespace ChessBridge
             // 
             // maxDepthLabel
             // 
-            this.maxDepthLabel.Location = new System.Drawing.Point(3, 208);
+            this.maxDepthLabel.Location = new System.Drawing.Point(3, 173);
             this.maxDepthLabel.Name = "maxDepthLabel";
             this.maxDepthLabel.Size = new System.Drawing.Size(112, 16);
             this.maxDepthLabel.TabIndex = 10;
@@ -185,7 +149,7 @@ namespace ChessBridge
             // 
             // selSearchLabel
             // 
-            this.selSearchLabel.Location = new System.Drawing.Point(3, 259);
+            this.selSearchLabel.Location = new System.Drawing.Point(3, 224);
             this.selSearchLabel.Name = "selSearchLabel";
             this.selSearchLabel.Size = new System.Drawing.Size(112, 16);
             this.selSearchLabel.TabIndex = 11;
@@ -193,7 +157,7 @@ namespace ChessBridge
             // 
             // codLabel
             // 
-            this.codLabel.Location = new System.Drawing.Point(0, 313);
+            this.codLabel.Location = new System.Drawing.Point(0, 278);
             this.codLabel.Name = "codLabel";
             this.codLabel.Size = new System.Drawing.Size(112, 16);
             this.codLabel.TabIndex = 12;
@@ -201,7 +165,7 @@ namespace ChessBridge
             // 
             // ttLabel
             // 
-            this.ttLabel.Location = new System.Drawing.Point(3, 366);
+            this.ttLabel.Location = new System.Drawing.Point(3, 331);
             this.ttLabel.Name = "ttLabel";
             this.ttLabel.Size = new System.Drawing.Size(112, 16);
             this.ttLabel.TabIndex = 13;
@@ -209,27 +173,25 @@ namespace ChessBridge
             // 
             // ponderCheckbox
             // 
-            this.ponderCheckbox.Location = new System.Drawing.Point(118, 412);
+            this.ponderCheckbox.Location = new System.Drawing.Point(118, 365);
             this.ponderCheckbox.Name = "ponderCheckbox";
             this.ponderCheckbox.Size = new System.Drawing.Size(104, 24);
             this.ponderCheckbox.TabIndex = 14;
             this.ponderCheckbox.Text = "Pondering";
             this.ponderCheckbox.UseVisualStyleBackColor = true;
-            
             // 
             // egtCheckbox
             // 
-            this.egtCheckbox.Location = new System.Drawing.Point(254, 412);
+            this.egtCheckbox.Location = new System.Drawing.Point(254, 365);
             this.egtCheckbox.Name = "egtCheckbox";
             this.egtCheckbox.Size = new System.Drawing.Size(142, 24);
             this.egtCheckbox.TabIndex = 15;
             this.egtCheckbox.Text = "Use End Game Tables";
             this.egtCheckbox.UseVisualStyleBackColor = true;
-            
             // 
             // randomSlider
             // 
-            this.randomSlider.Location = new System.Drawing.Point(121, 157);
+            this.randomSlider.Location = new System.Drawing.Point(121, 122);
             this.randomSlider.Maximum = 100;
             this.randomSlider.Name = "randomSlider";
             this.randomSlider.Size = new System.Drawing.Size(240, 45);
@@ -239,7 +201,7 @@ namespace ChessBridge
             // 
             // maxDepthSlider
             // 
-            this.maxDepthSlider.Location = new System.Drawing.Point(121, 208);
+            this.maxDepthSlider.Location = new System.Drawing.Point(121, 173);
             this.maxDepthSlider.Maximum = 99;
             this.maxDepthSlider.Minimum = 1;
             this.maxDepthSlider.Name = "maxDepthSlider";
@@ -251,8 +213,8 @@ namespace ChessBridge
             // 
             // selSearchSlider
             // 
-            this.selSearchSlider.Location = new System.Drawing.Point(121, 259);
-            this.selSearchSlider.Maximum = 16;
+            this.selSearchSlider.Location = new System.Drawing.Point(121, 224);
+            this.selSearchSlider.Maximum = 12;
             this.selSearchSlider.Name = "selSearchSlider";
             this.selSearchSlider.Size = new System.Drawing.Size(240, 45);
             this.selSearchSlider.TabIndex = 18;
@@ -260,18 +222,20 @@ namespace ChessBridge
             // 
             // codSlider
             // 
-            this.codSlider.Location = new System.Drawing.Point(121, 310);
+            this.codSlider.LargeChange = 10;
+            this.codSlider.Location = new System.Drawing.Point(121, 275);
             this.codSlider.Maximum = 500;
             this.codSlider.Minimum = -500;
             this.codSlider.Name = "codSlider";
             this.codSlider.Size = new System.Drawing.Size(240, 45);
+            this.codSlider.SmallChange = 10;
             this.codSlider.TabIndex = 19;
             this.codSlider.TickFrequency = 25;
             this.codSlider.Scroll += new System.EventHandler(this.CodSliderScroll);
             // 
             // randSpinner
             // 
-            this.randSpinner.Location = new System.Drawing.Point(367, 157);
+            this.randSpinner.Location = new System.Drawing.Point(367, 122);
             this.randSpinner.Name = "randSpinner";
             this.randSpinner.Size = new System.Drawing.Size(55, 20);
             this.randSpinner.TabIndex = 21;
@@ -279,35 +243,35 @@ namespace ChessBridge
             // 
             // maxDepthSpinner
             // 
-            this.maxDepthSpinner.Location = new System.Drawing.Point(367, 208);
+            this.maxDepthSpinner.Location = new System.Drawing.Point(367, 173);
             this.maxDepthSpinner.Maximum = new decimal(new int[] {
-                                    99,
-                                    0,
-                                    0,
-                                    0});
+            99,
+            0,
+            0,
+            0});
             this.maxDepthSpinner.Minimum = new decimal(new int[] {
-                                    1,
-                                    0,
-                                    0,
-                                    0});
+            1,
+            0,
+            0,
+            0});
             this.maxDepthSpinner.Name = "maxDepthSpinner";
             this.maxDepthSpinner.Size = new System.Drawing.Size(55, 20);
             this.maxDepthSpinner.TabIndex = 22;
             this.maxDepthSpinner.Value = new decimal(new int[] {
-                                    1,
-                                    0,
-                                    0,
-                                    0});
+            1,
+            0,
+            0,
+            0});
             this.maxDepthSpinner.ValueChanged += new System.EventHandler(this.MaxDepthSpinnerValueChanged);
             // 
             // selSearchSpinner
             // 
-            this.selSearchSpinner.Location = new System.Drawing.Point(367, 259);
+            this.selSearchSpinner.Location = new System.Drawing.Point(367, 224);
             this.selSearchSpinner.Minimum = new decimal(new int[] {
-                                    100,
-                                    0,
-                                    0,
-                                    -2147483648});
+            100,
+            0,
+            0,
+            -2147483648});
             this.selSearchSpinner.Name = "selSearchSpinner";
             this.selSearchSpinner.Size = new System.Drawing.Size(55, 20);
             this.selSearchSpinner.TabIndex = 23;
@@ -315,47 +279,62 @@ namespace ChessBridge
             // 
             // codSpinner
             // 
-            this.codSpinner.Location = new System.Drawing.Point(367, 309);
+            this.codSpinner.Increment = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.codSpinner.Location = new System.Drawing.Point(367, 303);
             this.codSpinner.Maximum = new decimal(new int[] {
-                                    500,
-                                    0,
-                                    0,
-                                    0});
+            500,
+            0,
+            0,
+            0});
             this.codSpinner.Minimum = new decimal(new int[] {
-                                    500,
-                                    0,
-                                    0,
-                                    -2147483648});
+            500,
+            0,
+            0,
+            -2147483648});
             this.codSpinner.Name = "codSpinner";
             this.codSpinner.Size = new System.Drawing.Size(55, 20);
             this.codSpinner.TabIndex = 24;
+            this.codSpinner.Visible = false;
             this.codSpinner.ValueChanged += new System.EventHandler(this.CodSpinnerValueChanged);
             // 
             // ttSizeComboBox
             // 
             this.ttSizeComboBox.FormattingEnabled = true;
             this.ttSizeComboBox.Items.AddRange(new object[] {
-                                    "None",
-                                    "512 KB",
-                                    "1 MB",
-                                    "2 MB",
-                                    "4 MB",
-                                    "8 MB",
-                                    "16 MB",
-                                    "32 MB",
-                                    "64 MB",
-                                    "128 MB",
-                                    "256 MB"});
-            this.ttSizeComboBox.Location = new System.Drawing.Point(121, 361);
+            "None",
+            "512 KB",
+            "1 MB",
+            "2 MB",
+            "4 MB",
+            "8 MB",
+            "16 MB",
+            "32 MB",
+            "64 MB",
+            "128 MB",
+            "256 MB"});
+            this.ttSizeComboBox.Location = new System.Drawing.Point(121, 326);
             this.ttSizeComboBox.Name = "ttSizeComboBox";
             this.ttSizeComboBox.Size = new System.Drawing.Size(240, 21);
             this.ttSizeComboBox.TabIndex = 25;
-            
+            // 
+            // codVal
+            // 
+            this.codVal.Location = new System.Drawing.Point(367, 276);
+            this.codVal.Name = "codVal";
+            this.codVal.ReadOnly = true;
+            this.codVal.Size = new System.Drawing.Size(55, 20);
+            this.codVal.TabIndex = 26;
+            this.codVal.Text = "0.0";
             // 
             // StylePropertiesPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.codVal);
             this.Controls.Add(this.ttSizeComboBox);
             this.Controls.Add(this.codSpinner);
             this.Controls.Add(this.selSearchSpinner);
@@ -372,9 +351,6 @@ namespace ChessBridge
             this.Controls.Add(this.selSearchLabel);
             this.Controls.Add(this.maxDepthLabel);
             this.Controls.Add(this.randLabel);
-            this.Controls.Add(this.matPosSpinner);
-            this.Controls.Add(this.matPosSlider);
-            this.Controls.Add(this.matPosLabel);
             this.Controls.Add(this.sopSpinner);
             this.Controls.Add(this.sopSlider);
             this.Controls.Add(this.sopLabel);
@@ -382,13 +358,11 @@ namespace ChessBridge
             this.Controls.Add(this.adLabel);
             this.Controls.Add(this.attackDefendSlider);
             this.Name = "StylePropertiesPanel";
-            this.Size = new System.Drawing.Size(430, 451);
+            this.Size = new System.Drawing.Size(430, 403);
             ((System.ComponentModel.ISupportInitialize)(this.attackDefendSpinner)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.attackDefendSlider)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sopSlider)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sopSpinner)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.matPosSlider)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.matPosSpinner)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.randomSlider)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.maxDepthSlider)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.selSearchSlider)).EndInit();
@@ -399,6 +373,7 @@ namespace ChessBridge
             ((System.ComponentModel.ISupportInitialize)(this.codSpinner)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
         private System.Windows.Forms.ComboBox ttSizeComboBox;
         private System.Windows.Forms.NumericUpDown codSpinner;
@@ -416,9 +391,6 @@ namespace ChessBridge
         private System.Windows.Forms.Label selSearchLabel;
         private System.Windows.Forms.Label maxDepthLabel;
         private System.Windows.Forms.Label randLabel;
-        private System.Windows.Forms.NumericUpDown matPosSpinner;
-        private System.Windows.Forms.TrackBar matPosSlider;
-        private System.Windows.Forms.Label matPosLabel;
         private System.Windows.Forms.NumericUpDown sopSpinner;
         private System.Windows.Forms.TrackBar sopSlider;
         private System.Windows.Forms.Label sopLabel;
@@ -466,25 +438,6 @@ namespace ChessBridge
             }
         }
         
-        void MatPosSliderScroll(object sender, System.EventArgs e)
-        {
-            int slider = this.matPosSlider.Value;
-            int spinner = (int)this.matPosSpinner.Value;
-            if (slider != spinner)
-            {
-                this.matPosSpinner.Value = this.matPosSlider.Value;
-            }
-        }
-        
-        void MatPosSpinnerValueChanged(object sender, System.EventArgs e)
-        {
-            int slider = this.matPosSlider.Value;
-            int spinner = (int)this.matPosSpinner.Value;
-            if (slider != spinner)
-            {
-                this.matPosSlider.Value = (int)this.matPosSpinner.Value ;
-            }
-        }
         
         void RandomSliderScroll(object sender, System.EventArgs e)
         {
@@ -553,6 +506,7 @@ namespace ChessBridge
             if (slider != spinner)
             {
                 this.codSpinner.Value = this.codSlider.Value;
+                this.codVal.Text = (double.Parse(slider.ToString()) / 100.00).ToString("0.0");
             }
         }
         
@@ -565,6 +519,7 @@ namespace ChessBridge
                 this.codSlider.Value = (int)this.codSpinner.Value ;
             }
         }
-        
+
+        private System.Windows.Forms.TextBox codVal;
     }
 }

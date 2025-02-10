@@ -680,16 +680,16 @@ namespace ChessBridge
 			//Now the bridge. Read in and record commands from GUI and pass them on to the engine.
 			string line;
 			log("***ENGINE COMS***");
-			
+
 			//if a personality was specified, use it first
-			/*if (gamePersonality != null)
+			if (gamePersonality != null)
 			{
-				log("IN: "+gamePersonality);
+				log("IN: " + gamePersonality);
 				//pass to engine
 				engineProcess.StandardInput.WriteLine(gamePersonality);
 				engineProcess.StandardInput.Flush();
-			}*/
-			
+			}
+
 			string[] nl = new string[]{"\\n"};
 			bool loaded = false;
 			while ((line = Console.ReadLine()) != null && line != "") 

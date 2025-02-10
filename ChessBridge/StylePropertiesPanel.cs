@@ -37,8 +37,6 @@ namespace ChessBridge
             this.sopSlider.Value = personality.Sop;
             this.sopSpinner.Value = personality.Sop;
             
-            this.matPosSlider.Value = personality.MatPos;
-            this.matPosSpinner.Value = personality.MatPos;
             
             this.randomSlider.Value = personality.Rand;
             this.randSpinner.Value = personality.Rand;
@@ -51,7 +49,8 @@ namespace ChessBridge
             
             this.codSlider.Value = personality.Contempt;
             this.codSpinner.Value = personality.Contempt;
-            
+            this.codVal.Text = (double.Parse(personality.Contempt.ToString())/100.00).ToString("0.0");
+
             this.ttSizeComboBox.SelectedIndex = personality.TtSize;
             
             if (personality.Ponder != 0)
@@ -77,8 +76,6 @@ namespace ChessBridge
             personality.Sop = this.sopSlider.Value;
             personality.Sop = (int)this.sopSpinner.Value;
             
-            personality.MatPos = this.matPosSlider.Value;
-            personality.MatPos = (int)this.matPosSpinner.Value;
             
             personality.Rand = this.randomSlider.Value;
             personality.Rand = (int)this.randSpinner.Value;

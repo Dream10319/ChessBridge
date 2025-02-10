@@ -25,7 +25,10 @@ namespace ChessBridge
             // The InitializeComponent() call is required for Windows Forms designer support.
             //
             InitializeComponent();
-            
+
+            personality.parsePersonality("test");
+            this.setPersonality(personality);
+
             //
             // TODO: Add constructor code after the InitializeComponent() call.
             //
