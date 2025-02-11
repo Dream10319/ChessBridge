@@ -535,7 +535,7 @@ namespace ChessBridge
 		    Personality personality = this;
 
             //byte[] bytes = File.ReadAllBytes(personalityFile);
-            byte[] bytes = ReadEmbeddedResource("ChessBridge.Personalities.Liam.CMP");
+			byte[] bytes = ReadEmbeddedResource("ChessBridge.Personalities.Liam.CMP");
 
             Program.log("\n**************************************************");
 			Program.log("Parsing Chessmaster Personality "+personalityFile);

@@ -57,9 +57,9 @@ namespace ChessBridge
             this.oppBSpinner.Value = personality.OppB;
             this.oppBVal.Text = (double.Parse(personality.OppB.ToString()) / 10.00).ToString("0.0");
 
-            this.nSlider.Value = personality.OwnQ;
-            this.nSpinner.Value = personality.OwnQ;
-            this.NVal.Text = (double.Parse(personality.OwnQ.ToString()) / 10.00).ToString("0.0");
+            this.nSlider.Value = personality.OwnN;
+            this.nSpinner.Value = personality.OwnN;
+            this.NVal.Text = (double.Parse(personality.OwnN.ToString()) / 10.00).ToString("0.0");
 
             this.oppNSlider.Value = personality.OppN;
             this.oppNSpinner.Value = personality.OppN;

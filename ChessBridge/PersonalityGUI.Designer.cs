@@ -175,12 +175,14 @@ namespace ChessBridge
             // 
             // openPersonalityButton
             // 
+            this.openPersonalityButton.Enabled = false;
             this.openPersonalityButton.Location = new System.Drawing.Point(466, 34);
             this.openPersonalityButton.Name = "openPersonalityButton";
             this.openPersonalityButton.Size = new System.Drawing.Size(75, 23);
             this.openPersonalityButton.TabIndex = 3;
             this.openPersonalityButton.Text = "Open";
             this.openPersonalityButton.UseVisualStyleBackColor = true;
+            this.openPersonalityButton.Visible = false;
             this.openPersonalityButton.Click += new System.EventHandler(this.OpenPersonalityButtonClick);
             // 
             // openPersonalityFileDialog
@@ -189,12 +191,14 @@ namespace ChessBridge
             // 
             // saveButton
             // 
+            this.saveButton.Enabled = false;
             this.saveButton.Location = new System.Drawing.Point(466, 64);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(75, 23);
             this.saveButton.TabIndex = 4;
             this.saveButton.Text = "Save";
             this.saveButton.UseVisualStyleBackColor = true;
+            this.saveButton.Visible = false;
             this.saveButton.Click += new System.EventHandler(this.SaveButtonClick);
             // 
             // savePersonalityFileDialog
@@ -219,6 +223,7 @@ namespace ChessBridge
             this.materialTab.ResumeLayout(false);
             this.infoTab.ResumeLayout(false);
             this.ResumeLayout(false);
+
         }
         private System.Windows.Forms.SaveFileDialog savePersonalityFileDialog;
         private System.Windows.Forms.Button saveButton;
